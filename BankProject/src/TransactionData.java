@@ -1,24 +1,33 @@
 // logic for withdrawing, deposit, checking balance, view previous transaction and calculate interest
 
 public final class TransactionData {
-    private int balance;
-    private int previousTransaction;
+    private static int balance;
+    private static int previousTransaction;
 
-    void deposit(int amount) {
+    public TransactionData(int balance, int previousTransaction) {
+        this.balance = balance;
+        this.previousTransaction = previousTransaction;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public static void deposit(int amount) {
         if (amount != 0) {
             balance = balance + amount;
             previousTransaction = amount;
         }
     }
 
-    void withdraw(int amount) {
+    public void withdraw(int amount) {
         if (amount != 0) {
             balance = balance - amount;
             previousTransaction = -amount;
         }
     }
 
-    void getPreviousTransaction() {
+    public void getPreviousTransaction() {
         if (previousTransaction > 0) {
             System.out.println("Deposited: " + previousTransaction);
         } else if (previousTransaction < 0) {
