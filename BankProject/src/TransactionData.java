@@ -1,6 +1,6 @@
 // logic for withdrawing, deposit, checking balance, view previous transaction and calculate interest
 
-public class TransactionData {
+public final class TransactionData {
     private int balance;
     private int previousTransaction;
 
