@@ -13,6 +13,16 @@ public final class TransactionData {
         return balance;
     }
 
+    public void getPreviousTransaction() {
+        if (previousTransaction > 0) {
+            System.out.println("Deposited: " + previousTransaction);
+        } else if (previousTransaction < 0) {
+            System.out.println("Withdrawn: " + Math.abs(previousTransaction));
+        } else {
+            System.out.println("No transaction occurred");
+        }
+    }
+
     public static void deposit(int amount) {
         if (amount != 0) {
             balance = balance + amount;
@@ -27,14 +37,5 @@ public final class TransactionData {
         }
     }
 
-    public void getPreviousTransaction() {
-        if (previousTransaction > 0) {
-            System.out.println("Deposited: " + previousTransaction);
-        } else if (previousTransaction < 0) {
-            System.out.println("Withdrawn: " + Math.abs(previousTransaction));
-        } else {
-            System.out.println("No transaction occurred");
-        }
 
-    }
 }

@@ -14,9 +14,11 @@ public final class Account {
     public String getAccountName() {
         return accountName;
     }
+
     public String getCustomerName() {
         return customerName;
     }
+
     public String getCustomerId() {
         return customerId;
     }
