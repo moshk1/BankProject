@@ -1,19 +1,24 @@
 // logic for input and output.
+// TODO change the constructor and have the input logic as a method.
 
 import java.util.Scanner;
 
 public final class InputLogic {
-  Account savingsAccount1 = new Account("Savings Account", "Woobear", "1337");
-  TransactionData transData = new TransactionData(0, 0);
+  private static Account savingsAccount1;
+  private static TransactionData transData;
 
-  public InputLogic() {
+
+  static void InputLogic() {
+    new Account("Savings Account", "Woobear", "1337");
+    new TransactionData(0, 0);
+
     char option = '\0';
     Scanner scanner = new Scanner(System.in);
     System.out.println("Welcome, " + savingsAccount1.getCustomerName() + "!");
     System.out.println("Your ID is: " + savingsAccount1.getCustomerId());
     System.out.println("You are viewing your " + savingsAccount1.getAccountName());
     System.out.println();
-    System.out.println("Wha can we do for you today?");
+    System.out.println("What can we do for you today?");
     System.out.println();
     System.out.println("A. Check your balance");
     System.out.println("B. Make a deposit");

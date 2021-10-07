@@ -1,8 +1,9 @@
 // logic for withdrawing, deposit, checking balance, view previous transaction and calculate interest
+// TODO Arraylist for transaction history
 
 public final class TransactionData {
-    private static int balance;
-    private static int previousTransaction;
+    private int balance;
+    private int previousTransaction;
 
     public TransactionData(int balance, int previousTransaction) {
         this.balance = balance;
@@ -23,7 +24,7 @@ public final class TransactionData {
         }
     }
 
-    public static void deposit(int amount) {
+    public void deposit(int amount) {
         if (amount != 0) {
             balance = balance + amount;
             previousTransaction = amount;
