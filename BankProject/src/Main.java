@@ -2,12 +2,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        InputLogic input1 = new InputLogic();
+        UserInput input1 = new UserInput();
+        input1.display();
 
     }
+
+
 }
 
 
 
-   /* Account savingsAccount1 = new Account("Savings Account", "Marita", "111187");
-    TransactionData transData = new TransactionData(0, 0);*/
+

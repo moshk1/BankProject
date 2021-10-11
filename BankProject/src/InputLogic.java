@@ -3,15 +3,17 @@
 
 import java.util.Scanner;
 
-public final class InputLogic {
+final class UserInput {
 
 
+  public UserInput() {
 
-  public InputLogic() {
+  }
 
-    Account savingsAccount1 = new Account("Savings Account", "Woobear", "1337");
+  public void display() {
+
+    Account savingsAccount1 = new Account("Savings Account", "Marita", "111187");
     TransactionData transData = new TransactionData(0, 0);
-
 
     char option = '\0';
     Scanner scanner = new Scanner(System.in);
@@ -47,6 +49,7 @@ public final class InputLogic {
           int amount = scanner.nextInt();
           transData.deposit(amount);
           System.out.println();
+          System.out.println("Deposit successful");
           break;
         }
         case 'C': {
@@ -54,6 +57,7 @@ public final class InputLogic {
           int amount2 = scanner.nextInt();
           transData.withdraw(amount2);
           System.out.println();
+          System.out.println("Don't waste them");
           break;
         }
         case 'D': {
@@ -64,12 +68,13 @@ public final class InputLogic {
           break;
         }
         case 'E': System.out.println("======================================");
-        break;
+          break;
 
         default: System.out.println("Error: invalid option. Please enter A, B, C, D or E");
       }
     } while (option != 'E');
     System.out.println("Thank you come again " + savingsAccount1.getCustomerName() + "!");
+
   }
 }
 
