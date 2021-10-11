@@ -4,13 +4,14 @@
 import java.util.Scanner;
 
 public final class InputLogic {
-  private Account savingsAccount1;
-  private TransactionData transData;
+
 
 
   public InputLogic() {
-    Account savingsAccount1 = new Account("Savings Account", "Marita", "111187");
+
+    Account savingsAccount1 = new Account("Savings Account", "Woobear", "1337");
     TransactionData transData = new TransactionData(0, 0);
+
 
     char option = '\0';
     Scanner scanner = new Scanner(System.in);
