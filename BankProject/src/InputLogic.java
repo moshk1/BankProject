@@ -5,15 +5,9 @@ import java.util.Scanner;
 
 final class UserInput {
 
+  public static void display(Account savingsAccount1, TransactionData transData) {
 
-  public UserInput() {
-
-  }
-
-  public void display() {
-
-    Account savingsAccount1 = new Account("Savings Account", "Marita", "111187");
-    TransactionData transData = new TransactionData(0, 0);
+// How to do this with constructor and method?
 
     char option = '\0';
     Scanner scanner = new Scanner(System.in);
@@ -76,6 +70,7 @@ final class UserInput {
     System.out.println("Thank you come again " + savingsAccount1.getCustomerName() + "!");
 
   }
+
 }
 
 
